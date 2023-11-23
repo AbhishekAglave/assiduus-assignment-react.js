@@ -37,9 +37,9 @@ function App() {
   };
 
   const Logo = React.createElement('img', {
-    src: '/Assiduus.png',
+    src: '/assiduus.png',
     alt: 'logo',
-    height: 40
+    height: 38
   });
 
   const drawer = (
@@ -183,7 +183,8 @@ function App() {
           flexGrow: 1,
           backgroundColor: 'rgba(25, 118, 210, 0.08)',
           p: 3,
-          width: { sm: `calc(100% - ${drawerWidth}px)` }
+          width: { sm: `calc(100% - ${drawerWidth}px)` },
+          minHeight: '100vh'
         }}
       >
         <Toolbar />

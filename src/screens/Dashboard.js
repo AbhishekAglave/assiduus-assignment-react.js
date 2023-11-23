@@ -7,14 +7,16 @@ function Dashboard() {
       sx={{
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
-        minHeight: '100vh',
         gap: 3,
         '@media (max-width:900px)': {
           gridTemplateColumns: '1fr' // Change to a single column for small screens
         }
       }}
     >
-      <Box sx={{ backgroundColor: 'white', borderRadius: '10px' }}></Box>
+      <Box
+        height={400}
+        sx={{ backgroundColor: 'white', borderRadius: '10px' }}
+      ></Box>
       <Box sx={{ backgroundColor: 'white', borderRadius: '10px' }}></Box>
       <Box sx={{ backgroundColor: 'white', borderRadius: '10px' }}></Box>
       <Box sx={{ backgroundColor: 'white', borderRadius: '10px' }}></Box>
