@@ -49,7 +49,7 @@ const Chart1 = () => {
   useEffect(() => {
     d3.select(chartRef.current).selectAll('*').remove();
 
-    const xScale = d3.scaleLinear().domain([9, 18]).range([5, 300]);
+    const xScale = d3.scaleLinear().domain([9, 18]).range([5, 380]);
     const yScale = d3
       .scaleLinear()
       .domain([0, d3.max(chartData.yAxis) + 5])
@@ -67,7 +67,7 @@ const Chart1 = () => {
       .append('svg')
       .attr('width', '100%')
       .attr('height', '100%')
-      .attr('viewBox', '-5 0 320 200');
+      .attr('viewBox', '-5 0 400 200');
 
     svg
       .append('path')

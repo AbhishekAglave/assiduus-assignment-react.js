@@ -14,7 +14,7 @@ function Chart3() {
     const xScale = d3
       .scaleBand()
       .domain(chartData.xAxis)
-      .range([0, 300])
+      .range([0, 400])
       .padding(0.1);
 
     const yScale1 = d3
@@ -33,7 +33,7 @@ function Chart3() {
       .append('svg')
       .attr('width', '100%')
       .attr('height', '100%')
-      .attr('viewBox', '0 0 320 200');
+      .attr('viewBox', '0 0 400 200');
 
     svg
       .selectAll('.bar1')
@@ -41,13 +41,13 @@ function Chart3() {
       .enter()
       .append('rect')
       .attr('class', 'bar1')
-      .attr('x', (d, i) => xScale(chartData.xAxis[i]) + 12)
+      .attr('x', (d, i) => xScale(chartData.xAxis[i]) + 24)
       .attr('y', (d) => yScale1(d) - 20)
-      .attr('width', xScale.bandwidth() - 24)
+      .attr('width', xScale.bandwidth() - 48)
       .attr('height', (d) => 200 - yScale1(d))
       .attr('fill', 'lightgreen')
-      .attr('rx', 6)
-      .attr('ry', 6);
+      .attr('rx', 4)
+      .attr('ry', 4);
 
     svg
       .selectAll('.bar2')
@@ -55,13 +55,13 @@ function Chart3() {
       .enter()
       .append('rect')
       .attr('class', 'bar2')
-      .attr('x', (d, i) => xScale(chartData.xAxis[i]) + 12)
+      .attr('x', (d, i) => xScale(chartData.xAxis[i]) + 24)
       .attr('y', (d) => yScale2(d) - 20)
-      .attr('width', xScale.bandwidth() - 24)
+      .attr('width', xScale.bandwidth() - 48)
       .attr('height', (d) => 200 - yScale2(d))
       .attr('fill', 'green')
-      .attr('rx', 6)
-      .attr('ry', 6);
+      .attr('rx', 4)
+      .attr('ry', 4);
 
     svg
       .append('g')
@@ -79,7 +79,6 @@ function Chart3() {
     svg
       .append('g')
       .attr('transform', 'translate(320,0)')
-      .call(d3.axisRight(yScale2).tickSize(0).tickPadding(10))
       .select('.domain')
       .remove();
   }, [chartData]);

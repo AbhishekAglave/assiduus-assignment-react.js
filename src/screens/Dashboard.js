@@ -11,8 +11,8 @@ function Dashboard() {
       sx={{
         display: 'grid',
         gridTemplateColumns: '1fr 1fr',
-        gap: 3,
-        '@media (max-width:900px)': {
+        gap: 2,
+        '@media (max-width:1080px)': {
           gridTemplateColumns: '1fr'
         }
       }}

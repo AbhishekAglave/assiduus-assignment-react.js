@@ -14,7 +14,7 @@ const BarChart = () => {
     const xScale = d3
       .scaleBand()
       .domain(chartData.xAxis)
-      .range([0, 300])
+      .range([0, 400])
       .padding(0.1);
 
     const yScale = d3
@@ -28,20 +28,20 @@ const BarChart = () => {
       .append('svg')
       .attr('width', '100%')
       .attr('height', '100%')
-      .attr('viewBox', '0 0 320 200');
+      .attr('viewBox', '0 0 400 200');
 
     svg
       .selectAll('rect')
       .data(chartData.yAxis)
       .enter()
       .append('rect')
-      .attr('x', (d, i) => xScale(chartData.xAxis[i]) + 12)
+      .attr('x', (d, i) => xScale(chartData.xAxis[i]) + 24)
       .attr('y', (d) => yScale(d) - 20)
-      .attr('width', xScale.bandwidth() - 24)
+      .attr('width', xScale.bandwidth() - 48)
       .attr('height', (d) => 200 - yScale(d))
       .attr('fill', 'lightgreen')
-      .attr('rx', 6)
-      .attr('ry', 6);
+      .attr('rx', 4)
+      .attr('ry', 4);
 
     svg
       .append('g')
