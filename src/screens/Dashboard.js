@@ -1,5 +1,9 @@
 import { Box } from '@mui/material';
 import React from 'react';
+import Chart1 from '../components/Chart1';
+import Chart2 from '../components/Chart2';
+import Chart3 from '../components/Chart3';
+import Chart4 from '../components/Chart4';
 
 function Dashboard() {
   return (
@@ -9,17 +13,14 @@ function Dashboard() {
         gridTemplateColumns: '1fr 1fr',
         gap: 3,
         '@media (max-width:900px)': {
-          gridTemplateColumns: '1fr' // Change to a single column for small screens
+          gridTemplateColumns: '1fr'
         }
       }}
     >
-      <Box
-        height={400}
-        sx={{ backgroundColor: 'white', borderRadius: '10px' }}
-      ></Box>
-      <Box sx={{ backgroundColor: 'white', borderRadius: '10px' }}></Box>
-      <Box sx={{ backgroundColor: 'white', borderRadius: '10px' }}></Box>
-      <Box sx={{ backgroundColor: 'white', borderRadius: '10px' }}></Box>
+      <Chart1 />
+      <Chart2 />
+      <Chart3 />
+      <Chart4 />
     </Box>
   );
 }
