@@ -75,7 +75,6 @@ const BarChart = () => {
             variant="text"
             style={{
               backgroundColor: '#1976d226',
-              color: 'green',
               fontWeight: 'bold'
             }}
           >
