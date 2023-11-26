@@ -247,9 +247,13 @@ function App() {
           sx={{
             flexGrow: 1,
             backgroundColor: 'rgba(25, 118, 210, 0.08)',
-            p: 3,
+            padding: 3,
             width: { sm: `calc(100% - ${drawerWidth}px)` },
-            minHeight: '100vh'
+            minHeight: '100vh',
+            '@media (max-width:480px)': {
+              paddingLeft: 0,
+              paddingRight: 0
+            }
           }}
         >
           <Toolbar />
